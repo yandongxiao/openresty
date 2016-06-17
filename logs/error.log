@@ -1,0 +1,10 @@
+2016/06/15 23:11:36 [emerg] 7435#0: unknown directive "lua_pckage_path" in /root/git/nginx-learning/conf/lua-nginx-module/lua_package_path.conf:4
+2016/06/15 23:12:01 [emerg] 7447#0: unknown directive "lua_pckage_path" in /root/git/nginx-learning/conf/lua-nginx-module/lua_package_path.conf:4
+2016/06/16 10:18:45 [emerg] 4147#0: directive "lua_package_path" is not terminated by ";" in /root/git/nginx-learning/conf/lua-nginx-module/content_by_lua_block.conf:5
+2016/06/16 10:54:58 [notice] 6498#0: signal process started
+2016/06/16 18:19:20 [emerg] 30987#0: unexpected end of file, expecting ";" or "}" in /root/git/nginx-learning/conf/nginx.conf:205
+2016/06/16 18:19:30 [emerg] 31014#0: open() "/root/git/nginx-learning/conf/lua-nginx-moduel/nginx-api-for-lua/api/read_body.conf" failed (2: No such file or directory) in /root/git/nginx-learning/conf/nginx.conf:196
+2016/06/16 18:19:59 [emerg] 31121#0: open() "/root/git/nginx-learning/conf/lua-nginx-moduel/nginx-api-for-lua/req/read_body.conf" failed (2: No such file or directory) in /root/git/nginx-learning/conf/nginx.conf:196
+2016/06/17 11:03:06 [emerg] 13787#0: unexpected end of file, expecting ";" or "}" in /root/git/nginx-learning/conf/nginx.conf:207
+2016/06/17 11:20:56 [emerg] 14128#0: invalid number of arguments in "lua_need_request_body" directive in /root/git/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/lua_need_request_body.conf:13
+2016/06/17 11:23:19 [emerg] 14351#0: unexpected "}" in /root/git/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/lua_need_request_body.conf:21
