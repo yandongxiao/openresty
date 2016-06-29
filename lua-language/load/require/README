@@ -1,0 +1,5 @@
+require搜索路径：
+    -- 全局变量：LUA_PATH; 事实证明这个是错误的，programming lua的内容不能全信.
+    环境变量：LUA_PATH
+    默认值：;;==;/usr/local/share/lua/5.2/?.lua;/usr/local/share/lua/5.2/?/init.lua;/usr/local/lib/lua/5.2/?.lua;/usr/local/lib/lua/5.2/?/init.lua;./?.lua
+    它们最终都是设置的package.path的值

@@ -309,3 +309,150 @@ stack traceback:
 2016/06/20 13:57:18 [warn] 96217#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
 2016/06/20 13:58:18 [warn] 96242#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
 2016/06/20 14:07:43 [warn] 96343#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 13:50:00 [warn] 20633#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 13:50:00 [emerg] 20633#0: unknown directive "--" in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/rewrite_by_lua_block3.conf:7
+2016/06/23 13:50:27 [warn] 20683#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 13:52:34 [warn] 20904#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 13:52:52 [warn] 20930#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 13:53:24 [warn] 20956#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 13:59:02 [warn] 21077#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:00:51 [warn] 21112#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:01:04 [warn] 21131#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:01:29 [warn] 21148#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:01:58 [warn] 21166#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:02:31 [warn] 21183#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:02:51 [warn] 21216#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:14:15 [warn] 21497#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:15:23 [warn] 21522#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:15:56 [warn] 21560#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:41:00 [warn] 21878#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:41:00 [emerg] 21878#0: invalid variable name "num1" in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/arg/set_by_lua.conf:11
+2016/06/23 14:42:58 [warn] 21928#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:44:22 [warn] 21966#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:46:45 [warn] 22074#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:47:14 [warn] 22115#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:55:01 [warn] 22273#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:56:50 [warn] 22340#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:56:50 [emerg] 22340#0: invalid variable name "val" in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/var/date.conf:6
+2016/06/23 14:57:05 [warn] 22367#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:59:46 [warn] 22388#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 14:59:46 [emerg] 22388#0: unknown directive "content_by_lua_code" in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/var/date.conf:22
+2016/06/23 15:00:00 [warn] 22398#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:01:44 [warn] 22439#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:02:53 [warn] 22461#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:03:12 [warn] 22480#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:14:37 [warn] 22508#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:28:54 [warn] 22694#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:28:54 [emerg] 22694#0: unexpected "}" in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/constant.conf:7
+2016/06/23 15:30:09 [warn] 22713#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:32:30 [warn] 22751#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:46:08 [warn] 22900#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:46:08 [emerg] 22900#0: unexpected "}" in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/print.conf:7
+2016/06/23 15:46:29 [warn] 22926#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:51:31 [warn] 23074#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:51:31 [emerg] 23074#0: open() "/Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/ctx/example.conf" failed (2: No such file or directory) in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:228
+2016/06/23 15:51:49 [warn] 23093#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:52:19 [warn] 23134#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:59:54 [warn] 23529#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 15:59:54 [emerg] 23529#0: no "events" section in configuration
+2016/06/23 16:00:09 [warn] 23571#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 16:00:42 [warn] 23612#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:04:37 [warn] 23956#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:05:13 [warn] 23990#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:05:57 [warn] 24036#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:10:24 [warn] 24129#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:10:58 [warn] 24165#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:12:20 [warn] 24199#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:12:51 [warn] 24242#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:14:11 [warn] 24275#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:14:37 [warn] 24307#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:14:39 [warn] 24319#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:15:59 [warn] 24336#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:17:31 [warn] 24551#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:17:51 [warn] 24579#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:18:26 [warn] 24597#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:39:53 [warn] 24833#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:39:53 [emerg] 24833#0: open() "/Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/resp/get_headers.conf" failed (2: No such file or directory) in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:227
+2016/06/23 17:40:34 [warn] 24971#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:41:31 [warn] 25039#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:41:53 [warn] 25083#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:43:03 [warn] 25156#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:43:56 [warn] 25194#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:44:48 [warn] 25248#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:45:15 [warn] 25267#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:48:11 [warn] 25422#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:48:50 [warn] 25444#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:49:50 [warn] 25510#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:51:01 [warn] 25532#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:51:36 [warn] 25570#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:52:42 [warn] 25591#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:53:40 [warn] 25613#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:54:14 [warn] 25633#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:54:45 [warn] 25667#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:57:58 [warn] 25718#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:58:21 [warn] 25743#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:58:34 [warn] 25761#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 17:59:51 [warn] 25779#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 18:00:22 [warn] 25832#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 18:01:12 [warn] 25849#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 18:01:37 [warn] 25868#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 18:01:54 [warn] 25885#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 18:02:18 [warn] 25904#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 18:07:34 [warn] 26043#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 18:08:40 [warn] 26080#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 18:10:06 [warn] 26124#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 18:10:06 [emerg] 26124#0: invalid URL prefix in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/req/is_internal.conf:6
+2016/06/23 18:12:28 [warn] 26137#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:15:27 [warn] 26325#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:15:27 [emerg] 26325#0: open() "/Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/req/raw_header().conf" failed (2: No such file or directory) in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:229
+2016/06/23 21:16:02 [warn] 26376#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:17:04 [warn] 26414#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:17:36 [warn] 26440#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:18:37 [warn] 26506#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:21:23 [warn] 26587#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:31:24 [warn] 26691#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:31:24 [emerg] 26691#0: unexpected "}" in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/req/set_uri.conf:11
+2016/06/23 21:31:48 [warn] 26701#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:32:23 [warn] 26719#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:33:43 [warn] 26741#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:37:42 [warn] 26765#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:38:01 [warn] 26784#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:38:16 [warn] 26801#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:38:41 [warn] 26821#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:38:41 [emerg] 26821#0: invalid number of arguments in "set" directive in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/req/set_uri.conf:7
+2016/06/23 21:39:00 [warn] 26837#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:39:16 [warn] 26855#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:39:24 [warn] 26873#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:39:33 [warn] 26891#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:39:41 [warn] 26909#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:40:56 [warn] 27080#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:41:20 [warn] 27098#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:41:34 [warn] 27116#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:42:38 [warn] 27142#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:42:38 [emerg] 27142#0: unexpected "}" in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/req/set_uri.conf:15
+2016/06/23 21:43:17 [warn] 27169#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:43:17 [emerg] 27169#0: unexpected "}" in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/req/set_uri.conf:15
+2016/06/23 21:43:56 [warn] 27183#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:44:44 [warn] 27206#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:45:13 [warn] 27223#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:45:37 [warn] 27241#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:46:38 [warn] 27269#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:47:06 [warn] 27303#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:48:33 [warn] 27353#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:50:17 [warn] 27415#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:51:48 [warn] 27441#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:51:48 [emerg] 27441#0: directive "rewrite_by_lua" is not terminated by ";" in /Users/dxyan06/git/github/nginx-learning/conf/lua-nginx-module/nginx-api-for-lua/req/set_uri2.conf:6
+2016/06/23 21:51:59 [warn] 27451#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:52:19 [warn] 27477#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 21:52:42 [warn] 27503#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 22:10:17 [warn] 27725#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 22:12:10 [warn] 27750#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 22:20:58 [warn] 27955#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 22:22:15 [warn] 28005#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 22:22:35 [warn] 28033#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 22:23:12 [warn] 28050#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 22:23:16 [warn] 28068#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 22:23:22 [warn] 28080#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 22:24:08 [warn] 28099#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 22:27:59 [warn] 28183#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
+2016/06/23 22:28:36 [warn] 28202#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /Users/dxyan06/git/github/nginx-learning/conf/nginx.conf:6
