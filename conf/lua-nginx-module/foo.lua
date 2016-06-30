@@ -5,3 +5,4 @@
 bar = require "conf/lua-nginx-module/bar"
 bar.num = bar.num + 1
 ngx.say(bar.num)
+ngx.say(ngx.worker.pid())
