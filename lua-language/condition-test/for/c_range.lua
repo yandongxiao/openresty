@@ -15,9 +15,9 @@
 
 num=10
 local i = 100
-for i = 1, 10 do
+for i = 1, 10 do    -- [1, 10]
     print(i)
     num = num + 1
 end
-print(num)
-print(i)
+print(num)  -- 20
+print(i)    -- 100

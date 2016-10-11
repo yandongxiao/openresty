@@ -1,5 +1,8 @@
+--[[
+-- 变量可以在同一个作用域下面定义多次，第二次相当于赋值操作
+--]]
+
 function call_variable()
-    -- 即便是同一个block内也可以定义变量多次
     local num = 100
     local num = 10
     print(num)
