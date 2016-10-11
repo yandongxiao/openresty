@@ -1,4 +1,15 @@
--- 返回多个返回值
+-- [[
+--
+-- 函数可以返回多个值
+--  1. 通过多重赋值的方式接收函数的返回值
+--  2. 函数返回结果作为表达式的一部分存在，且存在于该表达式的最后
+--     函数返回结果作为另一个函数的参数，且存在于函数参数的最后一个位置
+--     可智能适应
+--  3. 函数返回值作为表达式的非最后一个值，那么表达式只会使用函数的第一个返回值
+--  4. 函数返回值作为table的参数，那么形成了一个数组
+-- ]]
+
+-- 1. 多重赋值的方式接收函数返回值
 function return_multi_params()
     return {name="terry", age=10}, "something elese", true
 end
@@ -6,6 +17,7 @@ person, str, go = return_multi_params()
 print(person["name"], "=", person["age"])
 print(str, go)
 
+-- 函数返回值作为表达式的一部分
 -- 函数A调用结果作为表达式的一部分, 且函数A调用处在表达式的最后
 -- 可以自适应
 function parrent1(a, b, c)

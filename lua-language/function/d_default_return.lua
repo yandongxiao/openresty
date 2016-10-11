@@ -1,3 +1,11 @@
+--[[
+-- 函数的默认返回值是nil
+-- Python:
+--  函数的默认返回值是None
+-- BASH：
+--  函数的默认返回值是空字符串
+--]]
+
 function return_nothing()
 end
 
