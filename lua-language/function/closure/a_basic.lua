@@ -1,5 +1,11 @@
-function sum()
-    sum = 0
+--[[
+-- LUA 支持closure语法
+--
+--]]
+
+sum = 0
+function cl()
+    local sum = 0
     function add(num)
         num = num or 0
         sum = sum + num
@@ -9,7 +15,8 @@ function sum()
     return add
 end
 
-fn = sum()
+fn = cl()
 print(fn())
 print(fn(1))
 print(fn(2))
+print(sum)
