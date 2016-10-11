@@ -7,7 +7,13 @@ function return_now()
         -- 结果：继续从print语句执行
         return
     end
-    print "nihao"
+    print "hello"
+end
+
+function return_now2()
+    return
+    print "world"
 end
 
 return_now()
+return_now2()

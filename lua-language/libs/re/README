@@ -2,4 +2,3 @@ Openresty提供了两套编写正则表达式的方法：LUA自身的正则和ng
 推荐使用ngx.re的原因有以下几点：
 1. LUA的正则表达式不符合POSIX标准，ngx.re符合
 2. ngx.re模块会将编译的pattern进行缓存
-
