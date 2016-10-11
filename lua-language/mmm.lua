@@ -10,7 +10,7 @@ function parse(query)
             str_key = string.sub(qstr, 0, first - 1)
             str_value = string.sub(qstr, first + 1)
         end
-        
+
         if str_key then
           kv[str_key] = string.lower(str_value)
         end
