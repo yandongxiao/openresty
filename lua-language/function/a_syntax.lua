@@ -17,3 +17,9 @@ function add(num1, num2)
 end
 
 print(add(1, 2))
+
+-- 一个函数若只有一个参数，并且此参数是一个字符串或table构造式，
+-- 那么圆括号便可以省略掉
+print "Hello World"
+print [[a multi-line
+          message]]

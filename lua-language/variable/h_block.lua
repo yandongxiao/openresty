@@ -9,9 +9,9 @@
 function local_var()
     do
         local name = "foo"
-        print(name) --foo
+        assert(name=="foo")
     end
-    print(name) --nil
+    assert(name==nil)
 end
 
 local_var()

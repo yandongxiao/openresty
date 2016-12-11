@@ -7,5 +7,5 @@
 -- pyhton 和 lua 是一样的
 --]]
 
-name="test"
-print(name)
+name = "test"
+assert(name=="test")

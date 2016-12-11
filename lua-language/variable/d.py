@@ -1,18 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+# python
+# python要求多重赋值时，等号两边的KV个数相等
+# NOTICE: 必须是相等，大于小于都不行
+# 否则，报错
+
 # 等于
 a, b, c = 1, 2, 3
-print(a, b, c)
-
-# 不合法
-aa, bb, cc = 1, 2
-print(aa, bb, cc)   # 值为nil
-# 不合法
-cc=10
-aa, bb, cc = 1, 2
-print(aa, bb, cc)   # 值为nil
-
-# 不合法
-xx, yy = 1, (2, 3)
-print(xx, yy)
+assert(a==1 and b==2 and c==3)

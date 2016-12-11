@@ -1,4 +1,5 @@
 --[[
+--
 -- 变量的赋值，也是变量的定义
 -- 分为三种情况
 --  变量个数==值得个数
@@ -11,18 +12,19 @@
 --    否则，出错
 --]]
 
--- 等于
+-- 1. 等于
 a, b, c = 1, 2, 3
-print(a, b, c)
+assert(a==1 and b==2 and c==3)
 
--- 大于, 且cc未定义
+-- 2. 大于, 且cc未定义
 aa, bb, cc = 1, 2
-print(aa, bb, cc)   -- 值为nil
--- 大于, 且cc定义
+assert(aa==1 and bb==2 and cc==nil)
+
+-- 3. 大于, 且cc定义
 cc=10
 aa, bb, cc = 1, 2
-print(aa, bb, cc)   -- 值为nil
+assert(aa==1 and bb==2 and cc==nil)
 
 -- 小于
 xx, yy = 1, 2, 3
-print(xx, yy)
+assert(xx==1 and yy==2)

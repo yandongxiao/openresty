@@ -16,17 +16,25 @@
 -- 注意：多重赋值时，变量个数大于值的个数的情况下，无论多余变量之前是否被赋值, 多余变量的值将为nil
 --]]
 
--- 定义未初始化的变量
-num=nil
-print(num)
+-- 1. 定义未初始化的变量
+assert(num==nil)
 
--- 删除变量
+-- 2. 删除变量
 name = "hello"
 name = nil
-print(name)
+assert(name==nil)
 
--- 作为条件测试对象
-val=nil
-if not val then
-    print(val)
+-- 3. 多重赋值
+name = "json"
+age = 10
+name, age = "xml"
+assert(name=="xml")
+assert(age==nil)
+
+-- 4. 作为条件测试对象
+val=nil -- 多余，但是为了防止上面测试case使用该值
+if not val  then
+    assert(val==nil)
+else
+    assert(1==3)
 end
