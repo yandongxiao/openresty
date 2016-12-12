@@ -1,17 +1,17 @@
 --[[
 --
 -- 函数本身是一个变量
--- BASH:
---   函数本身是一个变量
--- PYTHON:
---   函数本身是一个变量
--- GO:
---   函数本身是一个变量
+-- BASH，PYTHON，GO都有这样的属性
 --]]
 
+-- 1. 函数名称本质上就是一个变量
 function myfunc()
-    print("myfunc")
 end
-
 myfunc=10
-print(myfunc)
+assert(myfunc==10)
+
+-- 2. 匿名函数
+-- 定义函数的另外一种方法
+myfunc = function ()
+end
+assert(type(myfunc) == "function")

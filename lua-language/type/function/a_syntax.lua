@@ -30,3 +30,6 @@ end
 myfunc {
     name = "dxyan"
 }
+
+-- 3. 利用unpack函数传递参数
+-- 参见：i_variable_agrs.lua

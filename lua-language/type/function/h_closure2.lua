@@ -13,13 +13,12 @@ function cl()
         end
         t[i] = add
         i = i + 1
-    until i == 5
-    print(i)
+    until i == 5    -- 退出时i==5
     return t
 end
 
 t = cl()
-print(t[1](1))
+print(t[1](1))      -- 当add被执行时，i==5
 print(t[2](1))
 print(t[3](1))
 print(t[4](1))

@@ -7,16 +7,20 @@
 --   #arg 返回参数的个数
 -- ]]
 
+-- run: lua g_main.lua 1 2 3
+assert(arg[-1] == "lua")
+assert(arg[0] == "g_main.lua")
+assert(arg[1] == "1")
+assert(arg[2] == "2")
+assert(arg[3] == "3")
+assert(#arg == 3)
+
+-- 只会遍历数组部分
 for i, val in ipairs(arg) do
     print(i, val)
 end
 
--- 返回参数的个数，注意不包括LUA和文件名称
-print(#arg)
-
--- 获取LUA文件的名称
-print(arg[0])   --根据用户的输入可能还会有-1, -2, -3
-
+-- 遍历表中所有的key
 for key, val in pairs(arg) do
     print(key, val)
 end
