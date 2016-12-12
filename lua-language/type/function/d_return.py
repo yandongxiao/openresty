@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 def func():
-    print("func")
+    pass
 
 val = func()
-print(val)
+assert(val==None)

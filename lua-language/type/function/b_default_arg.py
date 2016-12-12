@@ -6,7 +6,6 @@
 def add (num1=0, num2=0):
     return num1 + num2
 
-print(add(1, 2))
-print(add(1))
-print(add(num1=1))
-
+assert(add(1, 2) == 3)
+assert(add(1) == 1)
+assert(add(num2=1) == 1)    # 支持具名赋值
