@@ -17,8 +17,3 @@ end
 vals = {100, 200, 300, 400}
 vals[#vals] = nil
 assert(#vals == 3)
-
--- 不存在
-vals = {100, 200, 300, 400}
-vals[#vals+1] = nil
-assert(#vals == 4)

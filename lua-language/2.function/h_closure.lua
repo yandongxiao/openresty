@@ -15,7 +15,7 @@ function cl()
 end
 
 fn = cl()
-print(fn())
-print(fn(1))
-print(fn(2))
-print(sum)
+fn()
+fn(1)
+fn(2)
+assert(fn() == 3)

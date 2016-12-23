@@ -28,3 +28,10 @@ assert(aa==1 and bb==2 and cc==nil)
 -- 小于
 xx, yy = 1, 2, 3
 assert(xx==1 and yy==2)
+
+-- 值之间的交换
+a = 10
+b = 20
+a, b = b, a
+assert(a == 20)
+assert(b == 10)
