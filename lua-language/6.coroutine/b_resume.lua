@@ -9,10 +9,10 @@ th1 = coroutine.create(myroutine1)
 s, v = coroutine.resume(th1, 1, 2)
 assert(s==true)
 assert(v=="hello")
-s, v = coroutine.resume(th1)    -- 传递的参数没什么用
+s, v = coroutine.resume(th1)
 assert(s==true)
 assert(v=="world")
-s, v = coroutine.resume(th1, 3, 4) -- 传递的参数没什么用
+s, v = coroutine.resume(th1, 3, 4) -- 参见持续传递数据
 assert(s==true)
 assert(v==3)
 
@@ -26,3 +26,11 @@ status, msg = coroutine.resume(th1, 1, 2)
 assert(status==false)
 print(msg)
 print("mark")
+
+-- 与函数区别3: 持续进行数据交互
+co = coroutine.create (function ()
+    v1, v2, v3 = coroutine.yield()      -- 获取resume的传递的数据
+    assert(v1==1 and v2==2 and v3==3)
+end)
+coroutine.resume(co)
+coroutine.resume(co, 1, 2, 3)

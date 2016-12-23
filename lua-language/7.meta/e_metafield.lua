@@ -1,0 +1,8 @@
+--[[
+-- LUA 还支持以下metafields
+-- __tostring <--> print
+-- __metatable <--> getmetatable and setmetatable
+-- 一旦__metatable被设置，就不允许调用者对metatable进行修改
+--
+-- NOTICE: 以上两个metafields是设置在metatable表上的
+--]]
