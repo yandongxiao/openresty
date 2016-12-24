@@ -1,0 +1,3 @@
+-- 1. Memoize Functions  --> 存放loadstring的代码片段
+-- 2. Object Attributes  --> 集中式存放所有的Object的属性信息，key就是Object
+-- 3. Tables with Default Values    --> 一个object对应一个default table，或者借鉴方式2
