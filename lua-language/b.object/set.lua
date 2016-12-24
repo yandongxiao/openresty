@@ -1,4 +1,3 @@
--- 整的需要这样吗？
 local table_insert = table.insert
 local string_format = string.format
 
