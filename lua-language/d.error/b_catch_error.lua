@@ -1,12 +1,8 @@
---[[
--- LUA一般不处理错误，由调用LUA模块的应用（其他语言）负责处理
---]]
-
 function report_error(var)
     if var then
         return var
     else
-        error("~o such file")
+        error("~o such file")   -- 参数不一定就是字符串，也可以是table
     end
 end
 

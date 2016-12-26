@@ -1,0 +1,10 @@
+--[[
+-- sort function:   对原数组做排序操作
+-- insert function: 向数组插入元素，默认插入到末尾
+-- maxn function:  返回下标是正数的最大值，没有的话返回0
+-- pack function: 将所有的可变变量，放入一个数组中
+--      table.pack(...)
+-- unpack   function: 与pack的功能相对
+-- concat   function: 将数组内容转换成字符串
+-- remove   function: 删除元素
+--]]

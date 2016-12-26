@@ -12,10 +12,14 @@ nt.add()
 nt.add()
 assert(nt.val() == 3)
 
--- 调用了P模块当中的一个函数, 注意是直接调用
--- ＊＊loadfile() 相当于定义了一个匿名函数＊＊
--- 深刻理解了上面这句话的意思以后，可以得出两点结论：
--- 1. f()的返回值与require函数的相同;
--- 2. 在函数当中可以嵌套函数(相当于闭包)
-call_pfunc()
-call_pfunc()
+-- 1. 失败时返回nil + error msg
+f, msg = loadfile("pp.lua")
+assert(f == nil)
+print(msg)
+
+local i = 0
+-- loadstring 总是在全局环境中编译它的字符串
+f = loadstring("i = i + 1")     -- 使用的是全局变量i, 所以被调用时出错。
+g = function () i = i + 1 end   -- 使用的是局部变量i
+f()
+g()

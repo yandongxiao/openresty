@@ -8,6 +8,7 @@
 -- coroutine
 -- collectgarbage: 主动进行垃圾回收操作
 -- rawget
+-- rawequal
 -- rawlen: NOTICE: len操作也是可以被劫持的
 -- rawset
 -- getmetatable
@@ -26,22 +27,21 @@
 -- require
 -- string
 -- table
+-- math
+-- os
+-- io
+-- debug
+-- error
+-- pcall: 捕获异常时使用
+-- next
+-- xpcall: 拥有一个发生异常时，主动调用的接口。往往是debug.debug or debug.traceback
 -- setfenv: 设置当前chunk or function的全局变量表
 --]]
 
 
 --[[
 -- 尚不熟悉的字段有：
--- debug
--- error
--- io
--- math
 -- module
--- next
--- os
 -- package
--- pcall
--- rawequal
 -- select
--- xpcall
 --]]
