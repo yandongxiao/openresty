@@ -1,0 +1,28 @@
+--[[
+-- LUA 和 C 语言之间的关系
+-- 
+-- 1. LUA是extension language: 将LUA以库的方式提供. 比如lua程序就是一个C应用，调用了LUA library
+-- ldd /usr/bin/lua
+--      liblua-5.1.so => /usr/lib64/liblua-5.1.so (0x00007f5dc1708000)
+--    具体C如何调用LIB LUA，请参见/Users/dxyan06/opt/openresty-1.9.15.1/bundle/lua-5.1.5/src/lua.c
+--
+-- 2. LUA是extensible language: 扩展LUA的功能，例如提供类似标准库string的功能，可以C库的方式提供
+-- 参见：/Users/dxyan06/opt/openresty-1.9.15.1/bundle/lua-5.1.5/src/lstrlib.c
+--
+-- 3. 无论C与LUA的关系如何，它们之间都是通过同一套API进行通信，称为C API。
+--    Both application code and library code use the same API to communicate with Lua, the so called C API
+--]]
+
+
+--[[
+--
+-- LUA C API:
+-- 1. LUA C API 不会对输入参数做任何检查. Most functions in the API do not check the correctness of their arguments
+-- 2. an omnipresent virtual stack 解决了LUA和C之间参数传递的问题
+-- 3. LUB LIB 对于内存分配失败这样的错误，不是返回error code and error message，而是直接抛出异常, 通过call longjmp实现.
+-- When we write library code (that is, C functions to be called from Lua), the use of long jumps is almost as convenient as a real
+-- exception-handling facility, because Lua catches any occasional error.
+-- When we write application code (that is, C code that calls Lua), however, we must provide a way to catch those errors.
+-- Error Handling in Application Code: 可以注册自己的panic函数，在程序退出前会被调用
+-- Error Handling in Library Code: 调用lua_error或luaL_error
+--]]
