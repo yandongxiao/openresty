@@ -76,15 +76,13 @@ int cfunc (lua_State *L) {
     dest[0] = 0;
     strcat(dest, str);
     lua_pushstring(L, strcat(dest, "d"));
-
-    lua_pushstring(L, dest);
     lua_pushvalue(L, -1);
     lua_replace(L, lua_upvalueindex(2));    // 更新upvalues
 
-    return 1;
+    return 2;
 }
 
-void closure() {
+void closure(void) {
     //  初始化closure
     lua_State* L = luaL_newstate();
     lua_pushnumber(L, 10);
@@ -97,15 +95,34 @@ void closure() {
     lua_setglobal(L,"cfunc");
     luaL_dofile(L, "cfunc.lua");
 
-    // NOTICE: 能否直接从upvalue中过去数据
-    lua_getglobal(L, "num1");
+    // NOTICE: 以下是通过全局变量来传递数据，也可以通过upvalue来传递数据
+    lua_getglobal(L, "val1");
     assert(lua_tonumber(L, -1) == 11);
-    lua_getglobal(L, "num2");
-    assert(lua_tonumber(L, -1) == 12);
+    lua_getglobal(L, "val2");
+    assert(strcmp(lua_tostring(L, -1), "hellod") == 0);
+}
+
+void pushlightuserdata(void) {
+
+    static const char Key = 'k';
+    lua_State* L = luaL_newstate();
+
+    // set
+    lua_pushlightuserdata(L, (void *)&Key);
+    lua_pushnumber(L, 10);
+    // 这是一个特殊的table，永远就在那里
+    lua_settable(L, LUA_REGISTRYINDEX);
+
+    // get
+    lua_pushlightuserdata(L, (void *)&Key);
+    lua_gettable(L, LUA_REGISTRYINDEX);
+    int myNumber = lua_tonumber(L, -1);
+    assert(myNumber == 10);
 }
 
 int main (void) {
     table();
     function();
     closure();
+    pushlightuserdata();
 }

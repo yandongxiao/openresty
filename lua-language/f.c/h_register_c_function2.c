@@ -10,7 +10,7 @@
 //待注册的C函数，该函数的声明形式在上面的例子中已经给出。
 ////需要说明的是，该函数必须以C的形式被导出，因此extern "C"是必须的。
 ////函数代码和上例相同，这里不再赘述。
-int add(lua_State* L)
+static int add(lua_State* L)
 {
     double op1 = luaL_checknumber(L,1);
     double op2 = luaL_checknumber(L,2);
@@ -18,7 +18,7 @@ int add(lua_State* L)
     return 1;
 }
 
-int sub(lua_State* L)
+static int sub(lua_State* L)
 {
     double op1 = luaL_checknumber(L,1);
     double op2 = luaL_checknumber(L,2);
@@ -41,8 +41,9 @@ static luaL_Reg newl[] = {
 //3. 在luaL_register的调用中，其第一个字符串参数为模块名"xxx"，第二个参数为待注册函数的数组。
 //4. 需要强调的是，所有需要用到"xxx"的代码，不论C还是Lua，都必须保持一致，这是Lua的约定，
 //   否则将无法调用。
-int luaopen_newl(lua_State* L)
+//   实际上就是调用lua_setglobal，同时借助虚拟栈，注册的函数
+int luaopen_newl(lua_State* L)  // 注意函数命名规范，LUA require是就需要指定newl; 同时注意函数类型也是规定好的
 {
-    luaL_newlib(L, newl);
-    return 1;
+    luaL_newlib(L, newl);   // 不支持函数luaL_register
+    return 1;   //luaL_newlib在虚拟堆栈上返回LUA表，所以是1
 }

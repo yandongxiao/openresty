@@ -1,2 +1,1 @@
-num1 = cfunc()
-num2 = cfunc()
+val1, val2 = cfunc()

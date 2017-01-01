@@ -32,8 +32,8 @@ int main(void) {
 
     // 设置Cclosure函数的上值
     lua_pushinteger(L, 10);
-    lua_pushinteger(L, 11);
-    lua_pushcclosure(L, mytest, 2);
+    lua_pushinteger(L, 11);     // closure variable 的初始值
+    lua_pushcclosure(L, mytest, 2); // closure 函数已经在堆栈上了
     lua_setglobal(L,"upvalue_test");
     luaL_dofile(L, "./luatest.lua");
 
