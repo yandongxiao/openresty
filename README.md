@@ -5,6 +5,7 @@ Name
 
 Table of Contents
 =================
-    [install](./doc/install.md)
-    [agentzh-tutorial](./conf/agentzh-tutorial)
-    [thread_pool](./doc/thread_pool.md)
+
+[install](./doc/install.md)
+[agentzh-tutorial](./conf/agentzh-tutorial)
+[thread_pool](./doc/thread_pool.md)
