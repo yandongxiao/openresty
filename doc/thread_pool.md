@@ -86,25 +86,28 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 1. 检测worker进程状态（D表示睡眠且不可终端；S表示可中断睡眠，往往表示在监听事件）；
 1. 利用wrk检测对非阻塞请求的响应指标，包括RPS、延时。
 
+```
     # 以下配置主要是为了提高Nginx的吞吐量。
     # 因为阻塞式操作是影响性能的关键，是瓶颈。为防止出现，即使使用了线程池，但由于其它影响并发性的配置存在，导致使用了线程池后，吞吐量也没有明显提升。
     worker_processes 16;
     events {
-     accept_mutex off;
+        accept_mutex off;
     }
+
     http {
-     include mime.types;
-     default_type application/octet-stream;
-     access_log off;
-     sendfile on;
-     sendfile_max_chunk 512k;
-     server {
-     listen 8000;
-     location / {
-     root /storage;
-     }
-     }
+        include mime.types;
+        default_type application/octet-stream;
+        access_log off;
+        sendfile on;
+        sendfile_max_chunk 512k;
+        server {
+            listen 8000;
+            location / {
+                root /storage;
+            }
+        }
     }
+```
 
 以下是测试环境，256GB的资源 >> 48GB的内存。这会导致随机请求的资源没有被缓存命中，从而变成一个阻塞操作。
 
@@ -132,30 +135,32 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 
  4. 多线程池
 
+```
     # We assume that each of the hard drives is mounted on one of these directories:
     # /mnt/disk1, /mnt/disk2, or /mnt/disk3# in the 'main' context
     thread_pool pool_1 threads=16;
     thread_pool pool_2 threads=16;
     thread_pool pool_3 threads=16;
     http {
-     proxy_cache_path /mnt/disk1 levels=1:2 keys_zone=cache_1:256m max_size=1024G use_temp_path=off;
-     proxy_cache_path /mnt/disk2 levels=1:2 keys_zone=cache_2:256m max_size=1024G use_temp_path=off;
-     proxy_cache_path /mnt/disk3 levels=1:2 keys_zone=cache_3:256m max_size=1024G use_temp_path=off;
-    
-    		split_clients $request_uri $disk {
-     33.3% 1;
-     33.3% 2;
-     * 3;
-     }
-    
-     server {
-     # ...
-     location / {
-     proxy_pass http://backend;
-     proxy_cache_key $request_uri;
-     proxy_cache cache_$disk; # !!可以动态选择缓存位置!!
-     aio threads=pool_$disk; # !!可以动态选择线程池!!
-     sendfile on;
-     }
-     }
+        proxy_cache_path /mnt/disk1 levels=1:2 keys_zone=cache_1:256m max_size=1024G use_temp_path=off;
+        proxy_cache_path /mnt/disk2 levels=1:2 keys_zone=cache_2:256m max_size=1024G use_temp_path=off;
+        proxy_cache_path /mnt/disk3 levels=1:2 keys_zone=cache_3:256m max_size=1024G use_temp_path=off;
+
+        split_clients $request_uri $disk {
+            33.3% 1;
+            33.3% 2;
+            * 3;
+        }
+
+        server {
+            # ...
+            location / {
+                proxy_pass http://backend;
+                proxy_cache_key $request_uri;
+                proxy_cache cache_$disk; # !!可以动态选择缓存位置!!
+                aio threads=pool_$disk; # !!可以动态选择线程池!!
+                sendfile on;
+            }
+        }
     }
+```
