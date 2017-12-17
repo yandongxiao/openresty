@@ -1,4 +1,4 @@
-# thread_pool
+# thread\_pool
 
 以下内容是对《 [利用thread_poll提升Nginx性能十倍文章](https://www.nginx.com/blog/thread-pools-boost-performance-9x/) 》的个人解读。结论：It is most useful where the volume of frequently requested content doesn’t fit into the operating system’s VM cache. This might be the case with, for instance, a heavily loaded NGINX‑based streaming media server. This is the situation we’ve simulated in our benchmark。
 
@@ -10,7 +10,7 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 
 ## **系统级别的支持**
 
-操作系统一般向开发者提供了同步和异步读取文件的接口，模块开发者当然应该采用异步接口来防止阻塞。但Linux提供的异步接口存在致命的问题：调用异步接口时需要给FD设置O_DIRECT属性，当系统读取文件时会绕过系统缓存，而直接从磁盘读取。
+操作系统一般向开发者提供了同步和异步读取文件的接口，模块开发者当然应该采用异步接口来防止阻塞。但Linux提供的异步接口存在致命的问题：调用异步接口时需要给FD设置O\_DIRECT属性，当系统读取文件时会绕过系统缓存，而直接从磁盘读取。
 
 > 操作系统会将异步调用的结果，以事件通知的方式告知上层应用
 
@@ -28,7 +28,7 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 
 1. 模块开发者可以继续使用阻塞式函数；
 1. 模块开发者应该使用Nginx封装后的函数，这样Nginx worker就可以截获到该文件描述符；
-1. Nginx封装的函数有：1. read；2.sendfile；3.aio_write。
+1. Nginx封装的函数有：1. read；2.sendfile；3.aio\_write。
 
 > 队列服务可以以阻塞或非阻塞方式来读取数据，反正对于worker进程来说都是非阻塞的。使用阻塞方式，还可以最大限度的使用系统缓存
 
@@ -44,7 +44,7 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 
 - directio size
 
-  当读取的文件大小大于 size 时，open函数打开O_DIRECT选项，开启异步读取。但是该选项将绕过缓存。所以如果该文件经常被读时，每次都会从磁盘读取。size大小是有讲究的，一般是512的倍数。
+  当读取的文件大小大于 size 时，open函数打开O\_DIRECT选项，开启异步读取。但是该选项将绕过缓存。所以如果该文件经常被读时，每次都会从磁盘读取。size大小是有讲究的，一般是512的倍数。
 
   可以做到大文件异步读取，不缓存；小文件阻塞式读取，缓存到操作系统。
 
@@ -63,12 +63,12 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 1.  **aio threads 指令的使用场景是内存容量无法缓存常用数据总容量的情况。** 如果内存容量足够的话，用户在读取一次该文件后，数据将会被缓存在内存中；
 1. 保持sendfile on打开。同时，设置aio off 和 direct off指令；
 
-## sendfile_max_chunk 和 output_buffers
+## sendfile\_max\_chunk 和 output\_buffers
 
 - worker process直接阻塞式调用read函数，这样会阻塞worker进程，文件越大，下一个请求被阻塞的时间越长？ **NO**
-  1. Nginx不是一次读取文件所有内容，太占用内存，而是使用 **output_buffers** 指令，申请固定的内存块来存储文件。文件大小 > 内存块，所以Nginx是分批次读取。
+  1. Nginx不是一次读取文件所有内容，太占用内存，而是使用 **output\_buffers** 指令，申请固定的内存块来存储文件。文件大小 > 内存块，所以Nginx是分批次读取。
   1. Nginx不是连续读取同一个文件的内容。流程如下：disk —> memory block —> write to socket —> wait for event. 等待的事件就是操作系统完成数据发送。所以，write to socket操作之后，很有可能去处理别的事件了。
-- sendfile on时，文件数据不会被读取到用户态，这时如何设置？sendfile_max_chunk
+- sendfile on时，文件数据不会被读取到用户态，这时如何设置？sendfile\_max\_chunk
 
 ## 性能测试
 
@@ -122,10 +122,10 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 1. 编译Niginx时，指定—with-threads选项；
 1. 只要添加 **aio threads指令（注意并非是aio on指令）** 即可享受线程池带来的好处。
 
-    thread_pool default threads=32 max_queue=65536;
+    thread_pool default threads=32 max\_queue=65536;
     aio threads=default;
 
-这是thread_pool的默认值；
+这是thread\_pool的默认值；
 
  3. 如果向QUEUE中添加新的task的速度高于threads处理请求的速度，那么QUEUE终究是会满的，这时会出现如下错误：
 
