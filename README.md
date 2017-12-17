@@ -13,6 +13,8 @@ doc
 
 [thread_pool](./doc/thread_pool.md)
 
+[reuseport](./doc/reuseport.md)
+
 code
 ====
 
