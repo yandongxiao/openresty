@@ -6,8 +6,16 @@ Name
 Table of Contents
 =================
 
+doc
+====
+
 [install](./doc/install.md)
+
+[thread_pool](./doc/thread_pool.md)
+
+code
+====
 
 [agentzh-tutorial](./conf/agentzh-tutorial)
 
-[thread_pool](./doc/thread_pool.md)
+[core-functionality](./conf/core-functionality)
