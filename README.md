@@ -1,8 +1,9 @@
 Name
 ====
 
-关于Nginx和Openresty的学习笔记。根据Nginx和Openresty的官方资料，结合自己的实验，
-总结Nginx指令和Openresty使用方法
+关于Nginx和Openresty的学习笔记。
+
+根据Nginx和Openresty的官方资料，结合自己的实验，总结Nginx指令和Openresty使用方法。
 
 Table of Contents
 =================
