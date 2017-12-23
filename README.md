@@ -23,3 +23,5 @@ code
 [agentzh-tutorial](./conf/agentzh-tutorial)
 
 [core-functionality](./conf/core-functionality)
+
+[http-core-module](./conf/http-core-module)
