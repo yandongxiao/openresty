@@ -8,18 +8,18 @@ function assert() {
 
 # 不管下面发送了几个请求给客户端，能够返回200的个数是与sleep有关系的
 # 返回200的个数=sleep秒数 + burst数目 + rate
-curl localhost &
+curl localhost:8000 &
 assert $? 0
-curl localhost &
+curl localhost:8000 &
 assert $? 0
 
 sleep 1
 
-curl localhost &
+curl localhost:8000 &
 assert $? 0
 
-curl localhost &
+curl localhost:8000 &
 assert $? 0
 
-curl localhost &
+curl localhost:8000 &
 assert $? 0
