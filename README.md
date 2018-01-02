@@ -25,3 +25,5 @@ code
 [core-functionality](./conf/core-functionality)
 
 [http-core-module](./conf/http-core-module)
+
+[http-proxy-module](./conf/http-proxy-module)
