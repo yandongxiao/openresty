@@ -27,3 +27,5 @@ code
 [http-core-module](./conf/http-core-module)
 
 [http-proxy-module](./conf/http-proxy-module)
+
+[http-upstream-module](./conf/http-upstream-module)
