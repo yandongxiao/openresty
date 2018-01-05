@@ -24,6 +24,8 @@ code
 
 [core-functionality](./conf/core-functionality)
 
+[http-rewrite-module](./conf/http-rewrite-module)
+
 [http-core-module](./conf/http-core-module)
 
 [http-proxy-module](./conf/http-proxy-module)
