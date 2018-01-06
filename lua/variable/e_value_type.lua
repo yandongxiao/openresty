@@ -59,12 +59,13 @@ t = { 1, 2, 3 }
 assert(t[1] == 1)
 
 -- 使用字符串作为索引
+-- 值可以是不同类型
 t = {}
 t.name = "hello"
-t.value = "world"
+t.value = 3
 assert(type(t) == "table")
 assert(t.name == "hello")
-assert(t.value == "world")
+assert(t.value == 3)
 
 -- 任何非nil值都可以作为key
 t[false] = "F"
