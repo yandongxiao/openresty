@@ -5,7 +5,6 @@
 -- 4. NOTE: 任意一个函数都可以拿来当作自协程
 --
 -- routine的各个状态：
---
 -- coroutine.create --> Suspend --resume--> Running --return--> Dead
 --                              |             |
 --                              |<---yield----|
@@ -23,7 +22,7 @@ end
 
 thread = coroutine.create(myroutine)    -- coroutine 并没有立刻执行
 assert(type(thread) == "thread")
-status, rt = coroutine.resume(thread, 1, 2)          -- coroutine的运行resume和停止yield都是受到管控的
+status, rt = coroutine.resume(thread, 1, 2) -- coroutine的运行resume和停止yield都是受到管控的
 assert(status==true)
 assert(rt == 1)
 
