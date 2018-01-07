@@ -4,5 +4,12 @@ else
     assert(1==2)
 end
 
-a = not (1 == 2) 
+a = not (1 == 2)
 assert (a == true)
+
+-- table, function, userdata是引用比较
+a = {1, 2, 3}
+b = {1, 2, 3}
+assert(a ~= b)
+b = a
+assert(a == b)
