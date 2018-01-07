@@ -1,3 +1,5 @@
+-- NOTE: lua支持匿名函数
+
 -- t 称为状态常量
 function my_next_factory(t) -- 这次返回的是下标
     i = 0

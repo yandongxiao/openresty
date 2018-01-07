@@ -7,6 +7,9 @@ function myfunc(num1, num2)
     local function foo()
         return "helloworld"
     end
+
+    -- Lua支持匿名函数
+    aa = function() end
     return foo
 end
 
