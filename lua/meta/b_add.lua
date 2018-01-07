@@ -5,10 +5,8 @@
 Set = {}    -- 相当于定义了一个Set类
 
 -- metatable，为了避免污染全局命名空间
-Set.mt = {
-    -- 但是若将 Set.mt 下移，会导致setmetatable(set, Set.mt) <==> setmetatable(set, nil)
-    __add = Set.union
-}
+-- 但是若将 Set.mt 下移，会导致setmetatable(set, Set.mt) <==> setmetatable(set, nil)
+Set.mt = {}
 
 -- 相当于定义了Set类的构造函数. t是一个数组，将数组中的每个元素都标记为true
 function Set.new(t)
