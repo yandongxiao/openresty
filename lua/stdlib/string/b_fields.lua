@@ -1,0 +1,40 @@
+--[[
+-- 参见：https://www.cnblogs.com/whiteyun/archive/2009/09/02/1541043.html
+-- 基础
+-- rep   function:
+-- upper function:
+-- lower function:
+-- char  function:
+-- byte  function:
+-- len   function:
+-- sub   function:
+-- reverse   function:
+-- format    function:
+--
+-- 高阶
+-- find  function:  // 第二个参数也可以是模式串
+-- gsub  function:
+-- match function:
+-- gmatch    function:
+-- dump  function:
+--]]
+
+
+--[[
+-- .(点): 与任何字符配对
+-- %a: 与任何字母配对
+-- %c: 与任何控制符配对(例如\n)
+-- %d: 与任何数字配对
+-- %l: 与任何小写字母配对
+-- %p: 与任何标点(punctuation)配对
+-- %s: 与空白字符配对
+-- %u: 与任何大写字母配对
+-- %w: 与任何字母/数字配对
+-- %x: 与任何十六进制数配对
+-- %z: 与任何代表0的字符配对
+-- %x(此处x是非字母非数字字符): 与字符x配对. 主要用来处理表达式中有功能的字符(^$()%.[]*+-?)的配对问题, 例如%%与%配对
+-- [数个字符类]: 与任何[]中包含的字符类配对. 例如[%w_]与任何字母/数字, 或下划线符号(_)配对
+-- [^数个字符类]: 与任何不包含在[]中的字符类配对. 例如[^%s]与任何非空白字符配对
+-- NOTICE: 当上述的字符类用大写书写时, 表示与非此字符类的任何字符配对. 例如, %S表示与任何非空白字符配对.例如，'%A'非字母的字符
+-- NOTICE: '%' 用作特殊字符的转义字符，因此 '%.' 匹配点；'%%' 匹配字符 '%'
+-- ]]
