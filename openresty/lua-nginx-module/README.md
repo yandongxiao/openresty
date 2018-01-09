@@ -19,7 +19,7 @@ lua-nginx-module将Lua语言集成到了Nginx的世界，使得开发者可以�
 
 	Lua是非抢占式的多协程工作模式，协程需要自己主动释放资源，其它协程才能够被执行。
 
-	> 如果Lua模块调用了Nginx的IO接口，这些接口的实现方式中存在主动yield资源的操作。此时，Nginx就会去处理别的请求。     
+	> 如果Lua模块调用了Nginx的IO接口，这些接口的实现方式中存在主动yield资源的操作。此时，Nginx就会去处理别的请求。
 
 4. 如何进行server级别的变量共享？
 
@@ -30,4 +30,4 @@ lua-nginx-module将Lua语言集成到了Nginx的世界，使得开发者可以�
 
 6. 什么是WebSockets？
 
-
+7. Cosockets?
