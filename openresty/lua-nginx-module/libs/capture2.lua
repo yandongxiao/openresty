@@ -4,4 +4,4 @@ local function capture()
     return ngx.location.capture("/capture")
 end
 
-return capture      -- 不但可以返回table，还可以返回一个函数
+return capture
