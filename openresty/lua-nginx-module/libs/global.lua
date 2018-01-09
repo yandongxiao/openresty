@@ -12,3 +12,5 @@ end
 function getname(newname)
     return name
 end
+
+return name
