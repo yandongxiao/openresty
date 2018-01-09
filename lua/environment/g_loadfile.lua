@@ -8,6 +8,7 @@ local name="jack"   -- 如果添加了local，p.lua就看不到该变量了，�
 f = loadfile("p.lua")
 f2 = loadfile("p.lua")
 assert(f ~= f2)
+print("hello")      -- NOTE：p.lua文件没有执行，它们的print在hello之后
 
 assert(type(f) == "function")
 nt = f()    -- 如果f在某个函数内调用，那么嵌套的函数会就地展开，外部是无法访问的

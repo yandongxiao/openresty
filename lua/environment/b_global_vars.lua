@@ -24,7 +24,7 @@
 -- load: 与loadstring功能类似，接收字符串作为输入。字符串内容应该是一个函数的内容
 -- loadfile: 加载并编译一个文件，不执行
 -- loadstring: 参见load
--- require: 加载Lua模块, 注意不是文件。同一个模块只会加载一次
+-- require: 加载Lua模块并执行。同一个模块只会加载一次
 -- string: 字符串相关的函数
 -- table: 表相关的函数
 -- math: 数学运算

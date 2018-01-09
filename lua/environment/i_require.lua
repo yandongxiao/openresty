@@ -7,6 +7,7 @@
 --]]
 
 m1 = require("p")   -- 参见package.path来设置搜索路径
+print "hello"   -- NOTE: p.lua文件中的print语句是在require执行过程中完成的
 assert(type(m1) == "table")
 m1.add()
 m1.add()
