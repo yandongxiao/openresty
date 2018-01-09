@@ -17,8 +17,17 @@ lua-nginx-module将Lua语言集成到了Nginx的世界，使得开发者可以�
 
 3. lua-nginx-module是的协程并发性问题？
 
-	Lua是非抢占式的多协程工作模式，协程需要自己主动释放资源，其它协程才能够被执行。所以不存在并发性问题
+	Lua是非抢占式的多协程工作模式，协程需要自己主动释放资源，其它协程才能够被执行。
+
+	> 如果Lua模块调用了Nginx的IO接口，这些接口的实现方式中存在主动yield资源的操作。此时，Nginx就会去处理别的请求。     
+
+4. 如何进行server级别的变量共享？
+
+	- 使用 ngx.shared.DICT；
+	- 使用redis，mysql等方式存储变量，使用openresty的其它模块，读写存储。例如，lua-resty-redis。
 
 5. 不是所有的lua模块都可以与nginx-lua-module共用，作者提供了lua-resty-*系列的模块，如何编写module?
 
-8. 什么是WebSockets？
+6. 什么是WebSockets？
+
+
