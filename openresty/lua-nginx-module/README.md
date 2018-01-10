@@ -43,8 +43,12 @@ lua-nginx-module将Lua语言集成到了Nginx的世界，使得开发者可以�
 
     One can usually work around this limitation by doing such operations in an earlier phase handler (like access_by_lua*) and passing along the result into this context via the ngx.ctx table.
 
-5. 不是所有的lua模块都可以与nginx-lua-module共用，作者提供了lua-resty-*系列的模块，如何编写module?
+8. 不是所有的lua模块都可以与nginx-lua-module共用，作者提供了lua-resty-\*系列的模块，如何编写module?
 
-6. 什么是WebSockets？
+9. 什么是WebSockets？
 
-7. Cosockets?
+    see [WebSocket 教程](http://www.ruanyifeng.com/blog/2017/05/websocket.html)
+
+10. Cosockets?
+
+    see cosocket.conf
