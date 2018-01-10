@@ -33,6 +33,12 @@ lua-nginx-module将Lua语言集成到了Nginx的世界，使得开发者可以�
 
     创建全局变量的位置：init_by_lua 和 init_worker_by_lua
 
+6. 如何理解As with other access phase handlers, access_by_lua will not run in subrequests.
+
+    ngx_lua模块的xx_by_lua模块都会有类似上面的一句话，它表示access_by_lua在子请求的上下文当中是不会被执行的。
+
+    即：在子请求当中access阶段的指令，不会被再次执行. see s_access_by_lua.conf
+
 5. 不是所有的lua模块都可以与nginx-lua-module共用，作者提供了lua-resty-*系列的模块，如何编写module?
 
 6. 什么是WebSockets？
