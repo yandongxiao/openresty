@@ -6,7 +6,6 @@ lua-nginx-module将Lua语言集成到了Nginx的世界，使得开发者可以�
 
 每个请求都会在Lua的一个协程内进行处理，lua-nginx-module提供了一套**同步但非阻塞的网络接口**。内部原理：1. lua-nginx-module接口执行异步请求，然后yield释放资源，同时该协程会被放入Nginx的时间模型中；2. 当Nginx接收到后端响应，触发协程继续执行。
 
-
 1. Lua coroutine是否可以进行阻塞式的操作？
 
 	不可以，因为Lua不会主动释放资源。但lua-nginx-module的接口保证是100%非阻塞的。
@@ -25,6 +24,14 @@ lua-nginx-module将Lua语言集成到了Nginx的世界，使得开发者可以�
 
 	- 使用 ngx.shared.DICT；
 	- 使用redis，mysql等方式存储变量，使用openresty的其它模块，读写存储。例如，lua-resty-redis。
+
+5. 一个请求的生命周期内会经历几个routine？
+
+    根据p_set_by_lua.conf的输出，一个请求会经历4个routine，main routine, rewrite routine, access routine 和 content routine
+
+    其中，好几个xx_by_lua都是在main routine内完成，但是xx_by_lua创建的变量也是不能共享的. ngx_lua对xx_by_lua创建的全局变量进行隔离
+
+    创建全局变量的位置：init_by_lua 和 init_worker_by_lua
 
 5. 不是所有的lua模块都可以与nginx-lua-module共用，作者提供了lua-resty-*系列的模块，如何编写module?
 
