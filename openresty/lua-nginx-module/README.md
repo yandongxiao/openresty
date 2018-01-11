@@ -43,6 +43,14 @@ lua-nginx-module将Lua语言集成到了Nginx的世界，使得开发者可以�
 
     One can usually work around this limitation by doing such operations in an earlier phase handler (like access_by_lua*) and passing along the result into this context via the ngx.ctx table.
 
+8. xxx_by_lua是按照顺序执行的吗？
+
+    header_filter_by_lua 只运行一次，在ngx_lua产生body之前被调用，所以可能是在content_by_lua的中间运行
+
+    body_filter_by_lua会运行多次，每次可能都在content_by_lua的中间运行
+
+    see ngx.status.conf
+
 8. 不是所有的lua模块都可以与nginx-lua-module共用，作者提供了lua-resty-\*系列的模块，如何编写module?
 
 9. 什么是WebSockets？
