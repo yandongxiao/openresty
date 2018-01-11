@@ -11,3 +11,5 @@ Table of Contents
 [nginx](./conf/README.md)
 
 [lua](./lua/README.md)
+
+[lua-nginx-module](./openresty/lua-nginx-module/README.md)
