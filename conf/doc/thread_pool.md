@@ -1,6 +1,6 @@
 # thread\_pool
 
-以下内容是对《 [利用thread_poll提升Nginx性能十倍文章](https://www.nginx.com/blog/thread-pools-boost-performance-9x/) 》的个人解读。结论：It is most useful where the volume of frequently requested content doesn’t fit into the operating system’s VM cache. This might be the case with, for instance, a heavily loaded NGINX‑based streaming media server. This is the situation we’ve simulated in our benchmark。
+以下内容是对《 [利用thread_poll提升Nginx性能十倍文章](https://www.nginx.com/blog/thread-pools-boost-performance-9x/) 》的个人解读。结论：It is most useful where the volume of frequently requested content doesn’t fit into the operating system’s VM cache. This might be the case with, for instance, a heavily loaded NGINX‑based streaming media server.
 
 ## **背景**
 
@@ -54,7 +54,7 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 
   只有当请求的文件大小小于directio size指定的大小，或者directio关闭的情况下，才会使用sendfile。sendfile可以在内核级别完成读取文件并发送给某套接字的功能，“零拷贝”功能使得sendfile更加高效。
 
-   **sendfile on 是提供性能的必备指令。而且应该关闭directio指令，这样既实现了零拷贝，也实现了缓存数据到操作系统。** 
+   **sendfile on 是提高性能的必备指令。而且应该关闭directio指令，这样既实现了零拷贝，也实现了缓存数据到操作系统。** 
 
 > Nginx一般有三种用途：静态资源网站、反向代理，缓存服务器。异步IO指令的使用，虽然提高了第一次IO响应的能力，但操作系统却失去了缓存该数据的机会。
 
@@ -67,8 +67,7 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 
 - worker process直接阻塞式调用read函数，这样会阻塞worker进程，文件越大，下一个请求被阻塞的时间越长？ **NO**
   1. Nginx不是一次读取文件所有内容，太占用内存，而是使用 **output\_buffers** 指令，申请固定的内存块来存储文件。文件大小 > 内存块，所以Nginx是分批次读取。
-  1. Nginx不是连续读取同一个文件的内容。流程如下：disk —> memory block —> write to socket —> wait for event. 等待的事件就是操作系统完成数据发送。所以，write to socket操作之后，很有可能去处理别的事件了。
-- sendfile on时，文件数据不会被读取到用户态，这时如何设置？sendfile\_max\_chunk
+  1. Nginx不是连续读取同一个文件的内容。流程如下：disk —> wait for event --> memory block —> write to socket —> wait for event. 等待事件的同时操作系统也在读写数据。所以，write to socket操作之后，很有可能去处理别的事件了。
 
 ## 性能测试
 
@@ -76,9 +75,9 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 
 测试目的：阻塞式操作会严重影响Nginx的性能，降低系统吞吐量，增加延时。
 
-测试方法：同时向Nginx发送阻塞式（200个并发连接）和非阻塞请求（50个并发连接），利用wrk工具，检测性能指标。
+测试方法：同时向Nginx发送阻塞式（200个并发连接）和非阻塞请求（50个并发连接, 如一直请求同一个文件），利用wrk工具，检测性能指标。
 
-影响因子：操作系统的缓存；Nginx额外的文件操作，影响Nginx并发性的其它操作。
+影响因子：操作系统的缓存；Nginx额外的文件操作, 如记录日志。
 
 验证手段：
 
@@ -88,7 +87,7 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 
 ```
     # 以下配置主要是为了提高Nginx的吞吐量。
-    # 因为阻塞式操作是影响性能的关键，是瓶颈。为防止出现，即使使用了线程池，但由于其它影响并发性的配置存在，导致使用了线程池后，吞吐量也没有明显提升。
+    # 关闭日志的目的：防止出现即使使用了线程池，但由于其它影响并发性的配置存在，导致使用了线程池后，吞吐量也没有明显提升。
     worker_processes 16;
     events {
         accept_mutex off;
@@ -115,7 +114,8 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 
 ## **什么时候使用aio threads，怎么使用？**
 
-最佳场景是：如果请求的资源被系统缓存，worker进程直接响应该请求；否则，下发读取文件任务到队列服务（队列服务）。因为文件被缓存的情况下，派发任务给队列服务是有性能损耗的。
+最佳场景是：如果请求的资源被系统缓存，worker进程直接响应该请求；否则，下发读取文件任务到队列服务（队列服务）。
+但是Linux系统并未如此智能，目前要么将读取文件的任务全部交给队列服务来处理，要么自己读取文件（存在阻塞的可能）。因为文件被缓存的情况下，派发任务给队列服务的过程是多余的，且是有性能损耗的。
 
 目前Linux还不支持上面的操作，只能是预估未来常用资源的总量，然后与内存总量进行比较。
 
@@ -123,9 +123,10 @@ Nginx采用 **非阻塞** 的 **事件驱动** 模型来处理请求，但是第
 1. 只要添加 **aio threads指令（注意并非是aio on指令）** 即可享受线程池带来的好处。
 
     thread_pool default threads=32 max\_queue=65536;
+
     aio threads=default;
 
-这是thread\_pool的默认值；
+    这是thread\_pool的默认值；
 
  3. 如果向QUEUE中添加新的task的速度高于threads处理请求的速度，那么QUEUE终究是会满的，这时会出现如下错误：
 

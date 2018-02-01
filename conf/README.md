@@ -3,8 +3,6 @@ Name
 
 关于Nginx模块的学习笔记。
 
-根据Nginx的官方资料，结合自己的实验，总结Nginx指令的使用方法。
-
 Table of Contents
 =================
 
