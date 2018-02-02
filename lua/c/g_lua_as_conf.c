@@ -36,7 +36,7 @@ int main () {
     int width;
     int height;
 
-    char * file = "ceph.conf";
+    char * file = "g.conf";
     load(file, &width, &height);
     printf("%d\n", width);
     printf("%d\n", height);
