@@ -1,5 +1,5 @@
 /*
- * userdata: 这是专门给C开发者预留的一个数据类型，它在LUA的严重就是一块内存，该类型的对象没有任何预定义的操作。
+ * 以数组的方式访问数据
  */
 
 #include <lua.h>        // basic functions
@@ -70,7 +70,7 @@ static const luaL_Reg arraylib [] = {
     {NULL, NULL}
 };
 
-int luaopen_array (lua_State *L) {
+int luaopen_narray (lua_State *L) {
     luaL_newlib(L, arraylib);   // NOTICE: 它的index值不是1
     luaL_newmetatable(L, "LuaBook.array");
 

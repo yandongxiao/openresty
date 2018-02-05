@@ -1,5 +1,5 @@
 /*
- * userdata: 这是专门给C开发者预留的一个数据类型，它在LUA的严重就是一块内存，该类型的对象没有任何预定义的操作。
+ * 使用metatable，检查userdata的类型
  */
 
 #include <lua.h>        // basic functions
@@ -70,7 +70,7 @@ static const luaL_Reg arraylib [] = {
     {NULL, NULL}
 };
 
-int luaopen_array (lua_State *L) {
+int luaopen_narray (lua_State *L) {
     /*
      * 1. 创建了一个metatable
      * 2. 将该metatable放置到registry表当中，形成互相映射的关系，即LuaBook.array <--> metatable

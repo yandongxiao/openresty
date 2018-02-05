@@ -1,6 +1,4 @@
 --[[
---问题一：
---  如何实现
 --
 --问题二:
 -- array模块的最大问题在于：数据和操作是分离的
@@ -23,28 +21,17 @@
 -- 调用方式改进，arr[i] = v
 --]]
 
-array = require "array"
-
--- 通过下面的技术手段也是可以解决第二个问题的
--- NOTICE: arr:size --> userdata.size(arr)；
--- 因为userdata没有任何key, 所以转而去metatable的 __index寻求帮助，发现了metaarray的size属性
--- 于是最终调用的是array.size(arr)
-
+array = require "narray"
 arr = array.new(1000)
---[[
-local metaarray = getmetatable(arr)
-metaarray.__index = metaarray
-metaarray.set = array.set
-metaarray.get = array.get
-metaarray.size = array.size
---]]
-
 assert(type(arr) == "userdata")
-assert(array.size(arr) == 1000)
-for i=1,1000 do
-    arr[i] = 1/i
+-- assert(array.size(arr) == 1000)
+for i=1, 1000 do
+    array.set(arr, i, 1/i)
+    -- arr:set(i, 1/i)   -- 以对象的方式访问数据
+    -- arr[i] = 1/i      -- 数组访问方式
 end
-assert(arr[10] == 0.1)
 
--- print(arr)
--- array.set(io.stdin, 2, 0)
+v = array.get(arr, 10)
+-- v = arr:get(10)      -- 对象访问方式
+-- v = arr[10]      -- 数组访问方式
+assert(v == 0.1)

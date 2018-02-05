@@ -1,5 +1,7 @@
 /*
- * userdata: 这是专门给C开发者预留的一个数据类型，它在LUA的严重就是一块内存，该类型的对象没有任何预定义的操作。
+ * gcc -shared -fPIC k_array.c -L/usr/local/lib -llua -o narray.so
+ * userdata: 这是专门给C开发者预留的一个数据类型，它在LUA的内的数据类型称为userdate
+ * 本质上是一块内存，该类型的对象没有任何预定义的操作。
  */
 
 #include <lua.h>        // basic functions
@@ -12,8 +14,6 @@ typedef struct NumArray {
     double values[1];
 } NumArray;
 
-//
-// lua_newuserdata
 static int newarray (lua_State *L) {
     int n = luaL_checkint(L, 1);
     size_t nbytes = sizeof(NumArray) + (n - 1)*sizeof(double);
@@ -63,7 +63,7 @@ static int getsize (lua_State *L) {
     return 1;
 }
 
-static const luaL_Reg arraylib [] = {
+static const luaL_Reg narray [] = {
     {"new", newarray},
     {"set", setarray},
     {"get", getarray},
@@ -71,7 +71,7 @@ static const luaL_Reg arraylib [] = {
     {NULL, NULL}
 };
 
-int luaopen_array (lua_State *L) {
-    luaL_newlib(L, arraylib);
+int luaopen_narray (lua_State *L) {
+    luaL_newlib(L, narray);
     return 1;
 }
