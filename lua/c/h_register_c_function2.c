@@ -35,15 +35,14 @@ static luaL_Reg newl[] = {
     {NULL, NULL}
 };
 
-//该C库的唯一入口函数。其函数签名等同于上面的注册函数。见如下几点说明：
+//该C库的唯一入口函数(没有static关键字)。其函数签名等同于上面的注册函数。见如下几点说明：
 //1. 我们可以将该函数简单的理解为模块的工厂函数。
 //2. 其函数名必须为luaopen_xxx，其中xxx表示library名称。Lua代码require "xxx"需要与之对应。
-//3. 在luaL_register的调用中，其第一个字符串参数为模块名"xxx"，第二个参数为待注册函数的数组。
-//4. 需要强调的是，所有需要用到"xxx"的代码，不论C还是Lua，都必须保持一致，这是Lua的约定，
-//   否则将无法调用。
-//   实际上就是调用lua_setglobal，同时借助虚拟栈，注册的函数
+//4. 需要强调的是，gcc生成的动态库需要是newl.so, luaL_Reg定义数组名需要时newl，luaopen_newl需要有newl.
+//   必须保持一致.
 int luaopen_newl(lua_State* L)  // 注意函数命名规范，LUA require是就需要指定newl; 同时注意函数类型也是规定好的
 {
-    luaL_newlib(L, newl);   // 不支持函数luaL_register
+    // 1. 创建一个table；2. table中的元素来自newl；3. 将table放到虚拟堆栈中
+    luaL_newlib(L, newl);
     return 1;   //luaL_newlib在虚拟堆栈上返回LUA表，所以是1
 }

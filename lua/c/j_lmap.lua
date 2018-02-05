@@ -5,7 +5,7 @@ function double(num)
     return num*2
 end
 
-t = {1,2,3}
+t = {1, 2, 3}
 lmap.map(t, double)
 
 for _, v in ipairs(t) do

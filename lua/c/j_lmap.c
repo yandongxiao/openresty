@@ -1,5 +1,5 @@
 // 编译方法
-// gcc -shared -fPIC h_register_c_function2.c -L/usr/local/lib -llua -o newl.so
+// gcc -shared -fPIC h_register_c_function3.c -L/usr/local/lib -llua -o lmap.so
 
 #include <stdio.h>
 #include <string.h>
