@@ -11,8 +11,9 @@ ffi.cdef[[
 local zlib = ffi.load(ffi.os == "Windows" and "zlib1" or "z")
 
 local function compress(txt)
+  -- 压缩后的长度是不会超过blen的
   local n = zlib.compressBound(#txt)
-  local buf = ffi.new("uint8_t[?]", n)
+  local buf = ffi.new("uint8_t[?]", n)  -- 创建动态大小的一块内存
   local buflen = ffi.new("unsigned long[1]", n)
   local res = zlib.compress2(buf, buflen, txt, #txt, 9)
   assert(res == 0)

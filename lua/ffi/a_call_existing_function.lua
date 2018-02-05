@@ -5,4 +5,4 @@ ffi.cdef[[
 ]]
 
 ffi.C.printf("%s\n", "helloworld");
--- ffi.C.printf("%d\n", 100)  为什么会执行失败
+ffi.C.printf("%f\n", 100)  -- 为什么会执行失败
