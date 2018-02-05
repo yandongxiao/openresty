@@ -20,7 +20,10 @@ Lua，在葡萄牙语里代表美丽的月亮。它有如下特点：
 ldd /usr/bin/lua
     liblua-5.1.so => /usr/lib64/liblua-5.1.so (0x00007f5dc1708000)
     可见，lua应用使用了liblua库
-``` ### lua is an extension language 
+```
+
+### lua is an extension language 
+
 lua的核心是liblua.so。程序员使用C语言开发程序时，可以借助lua库，将部分逻辑扩展到lua
 文件。C程序通过lua_pcall调用lua文件，并获取返回结果.
 
