@@ -1,5 +1,4 @@
 #! /usr/local/bin/lua
--- 劫持len操作
 Person = {}
 Person.mt = {}
 
@@ -12,7 +11,9 @@ function Person.len(t)
     return len
 end
 
+-- 劫持len操作
 Person.mt.__len = Person.len
+
 jack = Person.new{
     name = "jack",
     size = 170
