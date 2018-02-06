@@ -7,7 +7,8 @@
 -- val值为nil，表示myroutine已经执行完毕并退出
 function myroutine(a, b)
     local sum = a + b
-    coroutine.yield(sum)
+    x, y = coroutine.yield(sum)
+    return x + y
     -- 最后return nil
 end
 
@@ -15,4 +16,4 @@ fn = coroutine.wrap(myroutine)  -- 相当于执行了coroutine.create函数
 assert(type(fn) == "function")
 
 assert(fn(1,2) == 3)    -- 执行resume函数，返回true
-assert(fn() == nil)     -- 执行resume函数，返回false
+assert(fn(7, 8) == 15)  -- 执行resume函数，返回false
