@@ -3,10 +3,11 @@ function report_error(var)
     if var then
         return var
     else
-        error("~o such file")   -- 参数不一定就是字符串，也可以是table
+        error("no such file")   -- 参数不一定就是字符串，也可以是table
     end
 end
 
+-- pcall会捕获错误
 status, data = pcall(report_error)
 if status then
     print(data)
