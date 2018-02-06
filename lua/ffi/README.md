@@ -32,5 +32,5 @@ ffi.C.printf("%f\n", 100)
 - 尤其是当C的数据结构类型多（int，unsigned int， long， unsigned long。。）
 
 >
-- 非常好的一篇[文章](http://blog.csdn.net/alexwoo0501/article/details/50636785)
-- 非常好的一篇[文章](https://moonbingbing.gitbooks.io/openresty-best-practices/lua/FFI.html)
+- 文章一[文章](http://blog.csdn.net/alexwoo0501/article/details/50636785)
+- 文章二[文章](https://moonbingbing.gitbooks.io/openresty-best-practices/lua/FFI.html)
