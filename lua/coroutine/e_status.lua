@@ -1,6 +1,6 @@
 --[[
 -- 当在协程A中resume()另外一个协程B时，A的状态不是suspended，因为我们不能再通过resume()调用执行，
--- 而且协程A也不是running状态，协程B才是，因此协程A处于normal状态。
+-- 而且协程A也不是running状态，协程B才是，协程A处于normal状态。
 --
 -- status: suspended, normal, running, dead
 -- NOTICE: 只能启动一个suspended和normal状态的协程

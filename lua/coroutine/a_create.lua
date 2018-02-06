@@ -5,9 +5,6 @@
 -- 4. NOTE: 任意一个函数都可以拿来当作自协程
 --
 -- routine的各个状态：
--- coroutine.create --> Suspend --resume--> Running --return--> Dead
---                              |             |
---                              |<---yield----|
 --]]
 
 function sleep(n)
