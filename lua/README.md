@@ -9,8 +9,8 @@ Lua，在葡萄牙语里代表美丽的月亮。它有如下特点：
 5. Lua语言不向后兼容
 
 >
-- [FFI](./ffi/README.md)
-- [lua-c-api](./lua-c-api/README.md)
+- [FFI](./ffi)
+- [lua-c-api](./lua-c-api)
 
 ## lua 与 c 语言的关系
 

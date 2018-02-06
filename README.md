@@ -8,10 +8,10 @@ Name
 Table of Contents
 =================
 
-[nginx](./conf/README.md)
+[nginx](./conf)
 
-[lua](./lua/README.md)
+[lua](./lua)
 
-[lua-nginx-module](./openresty/lua-nginx-module/README.md)
+[lua-nginx-module](./openresty/lua-nginx-module)
 
-[nginx-api-for-lua](./openresty/nginx-api-for-lua/README.md)
+[nginx-api-for-lua](./openresty/nginx-api-for-lua)
