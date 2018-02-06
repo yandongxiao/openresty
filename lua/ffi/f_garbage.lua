@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 ffi.cdef[[
 typedef struct { int *a; } foo_t;
 ]]

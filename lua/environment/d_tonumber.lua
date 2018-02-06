@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- 只针对字符串和数字
 age = "10"
 assert(tonumber(age) == 10)

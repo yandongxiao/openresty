@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 args = {...}
 
 -- 只有一个元素: 1:emmy

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 local Set = require "set"
 
 local set1 = Set.new {10, 20, 30}

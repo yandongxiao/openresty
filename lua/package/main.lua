@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- NOTE: 模块需要确保自己没有定义全局变量
 
 bob = require "bob"

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 Account = {         -- 对象名称
     balance = 0     -- 对象状态
 }

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 function foo (str)
     if type(str) ~= "string" then
         -- 错误支持错误级别

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 str1 = "hello"
 str2 = "world"
 

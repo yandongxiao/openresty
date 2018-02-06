@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 tbl = {
     [1] = "a",
     [2] = "b",

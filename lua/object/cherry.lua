@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- 尚未解决：
 --      如何利用LUA语法构造class系统，包括继承和隐藏

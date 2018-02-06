@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 local _M = {}
 
 function _M:deposit(v)

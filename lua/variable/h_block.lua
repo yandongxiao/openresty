@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- local作用域的真正大小是一个block
 -- 一个block:

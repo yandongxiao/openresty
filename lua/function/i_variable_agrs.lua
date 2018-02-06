@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- LUA 语言支持可变参数
 --]]

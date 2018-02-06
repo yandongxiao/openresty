@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- LUA 存在weak key、weak value、weak kv
 --]]

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 local table_insert = table.insert
 local string_format = string.format
 

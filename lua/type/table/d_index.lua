@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- 1. 访问下标不存在的元素时，返回nil
 arr = {
     [1] = 1,

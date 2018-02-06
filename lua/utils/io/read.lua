@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 f, err = io.open("/tmp/input", "r")
 if f == nil then
     print("err: ", err)

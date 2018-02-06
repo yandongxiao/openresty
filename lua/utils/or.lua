@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 query="vFrame"
  if string.find(string.lower(query), "vframe") or
        string.find(string.lower(query), "vinfo") or

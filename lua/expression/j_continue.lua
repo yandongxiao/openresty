@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- LUA 原生是不支持contiue的
 --]]

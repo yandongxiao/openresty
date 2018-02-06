@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- [[
 --  定义metatable的范式
 -- ]]

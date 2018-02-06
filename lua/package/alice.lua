@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 local alice = {}
 
 -- 1. alice这个名字以后如果要换的话，需要需要很多行代码

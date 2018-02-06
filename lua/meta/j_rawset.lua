@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- __newindex 和 __index metamethod确实给LUA带来了很大的魔力，但是也掩盖了
 -- table本身数据的真实情况

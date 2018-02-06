@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- table 在作为函数参数方面的应用
 --]]

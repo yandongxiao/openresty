@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 if 1 == 2 or 2 == 2 then
     assert(2 == 2)
 else

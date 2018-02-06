@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- LUA不支持具名函数调用, 但是用户可以借助unpack函数，向用户传递一个数组
 -- NOTICE: 是数组，传递table是没有用的

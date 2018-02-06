@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- rawget是绕过metamethod __index的方式之一
 --]]

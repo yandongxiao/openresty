@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 --
 -- nil是Lua语言的一种特殊类型，该类型只有一个值，nil。nil类型的存在使得Lua拥有了丰富的特性:

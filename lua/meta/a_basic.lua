@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- metatable是表展现自己魅力的地方
 --]]

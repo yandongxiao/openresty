@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 local P = {}
 
 function P.age ()   -- public

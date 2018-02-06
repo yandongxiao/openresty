@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- 1. concat with string
 str1 = "hello"
 str3 = "world"

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- 证明:
 --  1. thread 的传递肯定是引用传递

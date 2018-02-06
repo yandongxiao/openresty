@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --
 -- 实现类似next函数的功能
 -- 借助范性for语句来进行迭代

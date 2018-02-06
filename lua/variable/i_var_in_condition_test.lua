@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- while 和 do 之间的变量x是全局变量
 -- 在定义了local之后开始使用局部变量

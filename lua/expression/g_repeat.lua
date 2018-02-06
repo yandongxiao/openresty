@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- 如果想从0开始计数的话
 
 sum = 0

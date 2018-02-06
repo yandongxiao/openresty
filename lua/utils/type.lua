@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 print(type(1))
 print(type("name"))
 print(type({1,2,3}))

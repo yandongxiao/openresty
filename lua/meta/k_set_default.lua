@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- __index 应用：指定tab.xxx的默认返回值支持为不同的table设置不同默认值
 --]]

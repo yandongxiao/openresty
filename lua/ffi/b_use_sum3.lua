@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 local ffi = require('ffi')
 local t = ffi.load("sum", false)
 

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- NOTICE:
 -- string库是不会对源字符串做任何修改的，都是返回新的字符串

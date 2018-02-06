@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- LUA 支持以下关系操作符的重载
 -- __eq  __lt  __le

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 Person = {}
 Person.mt = {}
 

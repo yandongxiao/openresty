@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 names = { "apple", "pear", "orange", "grape" }  -- 只是针对数组
 table.sort(names)   -- 在原先的table上做排序
 -- 默认是做升序排序

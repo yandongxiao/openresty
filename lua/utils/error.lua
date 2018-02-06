@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 function tt()
   print "enter a number:"
   n = io.read("*number")

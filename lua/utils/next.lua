@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 t = {name="terry", age=20, 1, 2, 3,}
 
 key, val = next(t)

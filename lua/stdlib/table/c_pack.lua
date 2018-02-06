@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 function print_args(...)
     args = table.pack(...)
     for i in ipairs(args) do

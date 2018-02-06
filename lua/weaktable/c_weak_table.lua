@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- NOTICE: only objects can be collected from a weak table.
 -- weak table的key如果是值类型，则与正常的table元素一样

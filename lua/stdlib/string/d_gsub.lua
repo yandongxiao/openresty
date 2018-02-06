@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 print(string.gsub("hello world", "(%w+)", "%1 %1")) -- 分组信息
 print(string.gsub("hello Lua", "(%w+)%s*(%w+)", "%2 %1"))
 

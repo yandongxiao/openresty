@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- 1. gmatch返回的是迭代器
 s = "hello world from Lua"
 for w in string.gmatch(s, "%a+") do

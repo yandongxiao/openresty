@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- 与load类函数的区别:
 --      1. require 可以通过LUA_PATH寻找合适的LUA文件进行加载；

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- 非nil 和 false的值都是true
 
 if 0 then

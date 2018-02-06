@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- __index metamethod 在继承中的使用非常常见
 -- __index 的类型也可以是table，注意与f_index.lua的区别

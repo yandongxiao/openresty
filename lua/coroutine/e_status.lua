@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- 当在协程A中resume()另外一个协程B时，A的状态不是suspended，因为我们不能再通过resume()调用执行，
 -- 而且协程A也不是running状态，协程B才是，协程A处于normal状态。

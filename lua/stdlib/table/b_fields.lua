@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- sort function:   对原数组做排序操作
 -- insert function: 向数组插入元素，默认插入到末尾

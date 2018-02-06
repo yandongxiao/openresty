@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 
 -- 参见emmy
 args = {...}

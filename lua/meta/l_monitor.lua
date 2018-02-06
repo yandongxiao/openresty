@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- create private index
 local index = {}
 

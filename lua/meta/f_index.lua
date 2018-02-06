@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- __index metamethod 在继承中的使用非常常见
 --]]

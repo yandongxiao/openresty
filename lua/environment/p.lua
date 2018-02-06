@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 M = {
     num = 1
 }

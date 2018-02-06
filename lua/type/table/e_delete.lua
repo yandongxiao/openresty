@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- # 不要以#tab作为数组元素的个数
 -- Notice however that the length operator # does not work with tables that are not arrays

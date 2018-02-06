@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- 参见：https://www.cnblogs.com/whiteyun/archive/2009/09/02/1541043.html
 -- 基础

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- 1. numberic for loop
 -- [0, 10]
 -- 1. exp1成为inital expression，exp2称为limit expression， exp3称为step expression

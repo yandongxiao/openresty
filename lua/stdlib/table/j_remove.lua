@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 nums = { 1, 2, 3, 4, 5 }
 table.remove(nums, 1)
 

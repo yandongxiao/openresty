@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- 默认返回值：
 --      LUA: nil

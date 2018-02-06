@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- 1. dofile 加载LUA文件、编译、并执行。
 -- 2. 与函数相比，你**无法传递参数**给p.lua文件，但通过dofile也可以获得模块返回值
 -- 3. NOTICE: 每次执行dofile操作，都会对代码进行重编译，耗时

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[
 -- string 会自动转换为number类型
 --]]

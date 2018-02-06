@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- 注意 if/elseif/else/end 的风格, LUA是不使用大括号的
 --]]

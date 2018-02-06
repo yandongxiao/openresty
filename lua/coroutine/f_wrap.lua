@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- 与 coroutine.create + coroutine.resume 的区别
 -- 1. coroutine.resume表达力不强

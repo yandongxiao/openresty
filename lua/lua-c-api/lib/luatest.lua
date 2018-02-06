@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 gloval_upvalue = 10
 gloval_upvalue1 = 20
 local local_upvalue = 100

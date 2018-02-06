@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- 当key值不在table中时，默认行为是在table中创建该(key, value)对。
 -- __newindex metamethod 可以截获该行为，即如果被设置，LUA转而去执行__newindex函数。

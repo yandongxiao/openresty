@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 a, b, c = table.unpack{
     1,
     2,

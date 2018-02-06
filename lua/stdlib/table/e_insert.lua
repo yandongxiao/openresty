@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 names = { "apple", "pear", "orange", "grape" }
 table.insert(names, "banana")   -- 默认插入到数组的末尾
 table.insert(names, 1, "banana")   -- 指定插入位置

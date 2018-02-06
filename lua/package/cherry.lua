@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 local function age ()
     return 10
 end

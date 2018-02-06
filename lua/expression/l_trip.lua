@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- a ? b : c 的等价形式
 
 b = "b"

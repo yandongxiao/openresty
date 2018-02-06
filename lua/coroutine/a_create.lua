@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 function sleep(n)
     os.execute("sleep " .. n)
 end

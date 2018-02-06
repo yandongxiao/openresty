@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- 遍历数组
 t = { 10, 20, 30 }
 for i, v in ipairs(t) do

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- 变量的值的类型有：
 --    nil

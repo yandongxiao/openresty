@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 --
 --问题二:

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 lmap = require "lmap"
 assert(type(lmap) == "table")
 

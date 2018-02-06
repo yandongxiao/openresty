@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- LUA 支持函数嵌套，支持closure语法
 --]]

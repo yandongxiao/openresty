@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 count = 0
 for k, v in pairs(mt) do
     count = count + 1

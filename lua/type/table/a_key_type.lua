@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --
 -- 1. table初始化和引用
 --    除了nil类型外，所有的类型都可以作为KEY，例如function 和 table

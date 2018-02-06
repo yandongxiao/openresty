@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- [[
 -- LUA不存在main函数，那么LUA如何接收用户传递的参数？
 -- arg是一个特殊的全局变量，类型为able

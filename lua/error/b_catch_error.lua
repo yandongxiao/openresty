@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 function report_error(var)
     if var then
         return var

@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 t = {
     __add = function (t1, t2)
         newt = {}

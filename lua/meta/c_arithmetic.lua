@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 --[[
 -- LUA 支持所有的算术操作的重载
 -- __add  __mul __sub __div __unm __pow __concat

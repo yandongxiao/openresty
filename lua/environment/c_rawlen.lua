@@ -1,3 +1,4 @@
+#! /usr/local/bin/lua
 -- 劫持len操作
 Person = {}
 Person.mt = {}
