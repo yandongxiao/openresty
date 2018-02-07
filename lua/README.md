@@ -9,6 +9,7 @@ Lua，在葡萄牙语里代表美丽的月亮。它有如下特点：
 5. Lua语言不向后兼容
 
 >
+- [基本语法](./expression)
 - [全局变量](./environment)
 - [协程](./coroutine)
 - [FFI](./ffi)

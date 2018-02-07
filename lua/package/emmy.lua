@@ -6,9 +6,6 @@ args = {...}
 --     print(k, v)
 -- end
 
-local sqrt = math.sqrt -- 需要将事先使用的函数、变量等收集起来
-local io = io
-
 local P = {}
 P.pairs = _G.pairs
 P.print = _G.print

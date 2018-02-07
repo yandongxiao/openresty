@@ -7,7 +7,7 @@ local function money()
     return age() * 10
 end
 
-local function myprivate()  -- private
+local function myprivate()
 end
 
 local cherry = {

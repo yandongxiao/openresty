@@ -1,7 +1,6 @@
 #! /usr/local/bin/lua
 -- 垃圾收集器不是万能的
--- 比如，t = {c = t}，即使t=nil，该表仍然不会被清除。这种引用称之为弱引用
--- 同时，需要一种用户和垃圾收集器之间交互的机制，告知它哪些是弱引用
+-- 比如，t = {c = t}，即使t=nil，该表仍然不会被清除。需要一种用户和垃圾收集器之间交互的机制，告知它哪些是弱引用
 
 -- Weak tables are the mechanism that you use to tell Lua that a reference should not prevent the reclamation of an object.
 -- A weak reference is a reference to an object that is not considered by the garbage collector.
