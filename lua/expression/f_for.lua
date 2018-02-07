@@ -34,7 +34,6 @@ for k, v in pairs(t) do
 end
 assert(sum == 5)
 
-
 -- for之间的表达式使用逗号
 t = {1, 2, 3, name="jack", 4}
 for i = 1, #t, 1 do

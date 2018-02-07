@@ -38,4 +38,4 @@ function myfunc(num1, num2)
     print(num1)
 end
 myfunc(20)
-print(num1)
+print(num1) -- 10
