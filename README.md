@@ -12,6 +12,8 @@ Table of Contents
 
 [lua](./lua)
 
+[openresty](./openresty)
+
 [lua-nginx-module](./openresty/lua-nginx-module)
 
 [nginx-api-for-lua](./openresty/nginx-api-for-lua)
